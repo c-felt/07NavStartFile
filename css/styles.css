@@ -363,6 +363,22 @@ div#navWrapper {
 nav {
   height: 100vh;
 }
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav li a {
+  display: block;
+  color: #1d295f;
+  padding: 0.9rem 2vw;
+  text-decoration: none;
+  text-align: right;
+  border-bottom: 1px solid #ccc;
+}
+nav li.active a {
+  color: #7c1d47;
+}
 
 /* --------------------------- MAIN --------------------------- */
 main h1 {
@@ -395,6 +411,25 @@ footer a {
 
 @media only screen and (min-width: 35rem) {
   /* NAVIGATION STUFF GOES HERE  */
+  body {
+    display: block;
+  }
+  #top a, #navlinks > a {
+    display: none;
+  }
+  nav {
+    height: auto;
+    border-bottom: 2px solid #ccc;
+  }
+  nav ul {
+    display: flex;
+  }
+  nav li a {
+    border: none;
+  }
+  nav li a:hover {
+    background-color: #eee;
+  }
 }
 @media only screen and (min-width: 64rem) {
   header, nav, main {
